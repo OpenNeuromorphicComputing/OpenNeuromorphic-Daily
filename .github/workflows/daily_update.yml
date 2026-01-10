@@ -1,0 +1,41 @@
+name: Daily ArXiv Update
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs every day at 08:00 UTC
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # IMPORTANT: Allows the bot to write back to the repo
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Paper Bot script
+        run: python daily_paper_bot.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Check if there are changes before committing to avoid empty commit errors
+          if [[ -n $(git status -s) ]]; then
+            git add README.md
+            git commit -m "🤖 Daily Paper Update"
+            git push
+          else
+            echo "No changes to commit."
+          fi
