@@ -1,10 +1,20 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-01-21 08:31 UTC
+**Automated Daily Update** | Last Run: 2026-01-22 08:31 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
 ## 🛠 Hardware & Materials
+
+### [Energy-efficient time series processing in real-time with fluidic iontronic memristor circuits](http://arxiv.org/abs/2601.14986v1)
+**2026-01-21** | *T. M. Kamsma, Y. Gu, C. Spitoni et al.*
+
+> Iontronic neuromorphic computing has emerged as a rapidly expanding paradigm. The arrival of angstrom-confined iontronic devices enables ultra-low power consumption with dynamics and memory timescales that intrinsically align well with signals of natural origin, a challenging combination for conventional (solid-state) neuromorphic materials. However, comparisons to earlier conventional substrates and evaluations of concrete application domains remain a challenge for iontronics. Here we propose a pathway toward iontronic circuits that can address established time series benchmark tasks, enabling performance comparisons and highlighting possible application domains for efficient real-time time series processing. We model a Kirchhoff-governed circuit with iontronic memristors as edges, while the dynamic internal voltages serve as output vector for a linear readout function, during which energy consumption is also logged. All these aspects are integrated into the open-source pyontronics package. Without requiring input encoding or virtual timing mechanisms, our simulations demonstrate prediction performance comparable to various earlier solid-state reservoirs, notably with an exceptionally low energy consumption of over 5 orders of magnitude lower. These results suggest a pathway of iontronic technologies for ultra-low-power real-time neuromorphic computation.
+
+### [An Ion-Intercalation Memristor for Enabling Full Parallel Writing in Crossbar Networks](http://arxiv.org/abs/2601.14613v1)
+**2026-01-21** | *Tingwei Zhang, Jiahui Liu, David Allstot et al.*
+
+> Crossbar architectures have long been seen as a promising foundation for in-memory computing, using memristor arrays for high-density, energy-efficient analog computation. However, this conventional architecture suffers from a fundamental limitation: the inability to perform parallel write operations due to the sneak path problem. This arises from the structural overlap of read and write paths, forcing sequential or semi-parallel updates and severely limiting scalability. To address this, we introduce a new memristor design that decouples read and write operations at the device level. This design enables orthogonal conductive paths, and employs a reversible ion doping mechanism, inspired by lithium-ion battery principles, to modulate resistance states independently of computation. Fabricated devices exhibit near-ideal memristive characteristics and stable performance under isolated read/write conditions.
 
 ### [Polychronous Wave Computing: Timing-Native Address Selection in Spiking Networks](http://arxiv.org/abs/2601.13079v1)
 **2026-01-19** | *Natalila G. Berloff*
@@ -61,19 +71,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > In this paper, the foundations of neuromorphic computing, spiking neural networks (SNNs) and memristors, are analyzed and discussed. Neuromorphic computing is then applied to FPGA design for digital signal processing (DSP). Finite impulse response (FIR) and infinite impulse response (IIR) filters are implemented with and without neuromorphic computing in Vivado using Verilog HDL. The results suggest that neuromorphic computing can provide low-latency and synaptic plasticity thereby enabling continuous on-chip learning. Due to their parallel and event-driven nature, neuromorphic computing can reduce power consumption by eliminating von Neumann bottlenecks and improve efficiency, but at the cost of reduced numeric precision.
 
-### [Thermally Configurable Multi-Order Polar Skyrmions in Multiferroic Oxide Superlattices](http://arxiv.org/abs/2601.05950v1)
-**2026-01-09** | *Kefan Liu, Yuhui Huang, Xiangwei Guo et al.*
-
-> Polar topological textures in low-dimensional ferroelectrics have emerged as a versatile platform for high-density information storage and neuromorphic computing. While low-order topological states, such as vortices and skyrmions, have been extensively studied, high-order polar topological families remain largely unexplored due to their higher energy requirements and limited stabilization methods. Here, using a BiFeO3 (BFO)-based multiferroic superlattice as a model system, we demonstrate a thermal-modulation strategy that stabilizes multi-order polar skyrmions and enables reversible tuning of their topological order through phase-field simulations. It was found that temperature modulation drives the system from polar solitons through 1π-, 2π-, 3π-, and 4π-skyrmion states, with closed heating-cooling path analyses revealing the widest thermal stability window for 2π-skyrmions (up to 600 K). Leveraging this robustness, 2% Sm doping in BFO lowers the transition temperatures, enabling room-temperature stabilization of 2π-skyrmions. These findings enrich the fundamental understanding of multi-order polar topologies and establish a tunable strategy for realizing variable-order topological configurations in practical memory devices.
-
-### [Self-Evolving Distributed Memory Architecture for Scalable AI Systems](http://arxiv.org/abs/2601.05569v1)
-**2026-01-09** | *Zixuan Li, Chuanzhen Wang, Haotian Sun*
-
-> Distributed AI systems face critical memory management challenges across computation, communication, and deployment layers. RRAM based in memory computing suffers from scalability limitations due to device non idealities and fixed array sizes. Decentralized AI frameworks struggle with memory efficiency across NAT constrained networks due to static routing that ignores computational load. Multi agent deployment systems tightly couple application logic with execution environments, preventing adaptive memory optimization. These challenges stem from a fundamental lack of coordinated memory management across architectural layers. We introduce Self Evolving Distributed Memory Architecture for Scalable AI Systems, a three layer framework that unifies memory management across computation, communication, and deployment. Our approach features (1) memory guided matrix processing with dynamic partitioning based on device characteristics, (2) memory aware peer selection considering network topology and computational capacity, and (3) runtime adaptive deployment optimization through continuous reconfiguration. The framework maintains dual memory systems tracking both long term performance patterns and short term workload statistics. Experiments on COCO 2017, ImageNet, and SQuAD show that our method achieves 87.3 percent memory utilization efficiency and 142.5 operations per second compared to Ray Distributed at 72.1 percent and 98.7 operations per second, while reducing communication latency by 30.2 percent to 171.2 milliseconds and improving resource utilization to 82.7 percent. Our contributions include coordinated memory management across three architectural layers, workload adaptive resource allocation, and a dual memory architecture enabling dynamic system optimization.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [Power-Law Scaling in the Classification Performance of Small-Scale Spiking Neural Networks](http://arxiv.org/abs/2601.14961v1)
+**2026-01-21** | *Zhengdi Zhang, Cong Han, Wenjun Xia*
+
+> This paper investigates the classification capability of small-scale spiking neural networks based on the Leaky Integrate-and-Fire (LIF) neuron model. We analyze the relationship between classification accuracy and three factors: the number of neurons, the number of stimulus nodes, and the number of classification categories. Notably, we employ a large language model (LLM) to assist in discovering the underlying functional relationships among these variables, and compare its performance against traditional methods such as linear and polynomial fitting. Experimental results show that classification accuracy follows a power-law scaling primarily with the number of categories, while the effects of neuron count and stimulus nodes are relatively minor. A key advantage of the LLM-based approach is its ability to propose plausible functional forms beyond pre-defined equation templates, often leading to more concise or accurate mathematical descriptions of the observed scaling laws. This finding has important implications for understanding efficient computation in biological neural systems and for pioneering new paradigms in AI-aided scientific discovery.
 
 ### [Effects of Introducing Synaptic Scaling on Spiking Neural Network Learning](http://arxiv.org/abs/2601.11261v1)
 **2026-01-16** | *Shinnosuke Touda, Hirotsugu Okuno*
@@ -110,19 +115,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > Aspect Term Extraction (ATE) identifies aspect terms in review sentences, a key subtask of sentiment analysis. While most existing approaches use energy-intensive deep neural networks (DNNs) for ATE as sequence labeling, this paper proposes a more energy-efficient alternative using Spiking Neural Networks (SNNs). Using sparse activations and event-driven inferences, SNNs capture temporal dependencies between words, making them suitable for ATE. The proposed architecture, SpikeATE, employs ternary spiking neurons and direct spike training fine-tuned with pseudo-gradients. Evaluated on four benchmark SemEval datasets, SpikeATE achieves performance comparable to state-of-the-art DNNs with significantly lower energy consumption. This highlights the use of SNNs as a practical and sustainable choice for ATE tasks.
 
-### [Nonlinear mode interactions under parametric excitation in a YIG microdisk](http://arxiv.org/abs/2601.05775v1)
-**2026-01-09** | *Gabriel Soares, Rafael Lopes Seeger, Amel Kolli et al.*
-
-> A pair of quantized spin-wave modes is driven by two-tone parallel pumping in a YIG microdisk. The nonlinear dynamics is experimentally investigated by probing the resulting steady state, which is found to critically depend on the chosen pair of modes, the detuning between the pump frequencies and the modes parametric resonance, as well as the temporal sequence of the two rf tones. A general theory of parametric excitation in confined structures based on magnetization normal modes is developed and quantitatively accounts for the observed dependence and non-commutative behaviors, which emerge from the interplay between the self and mutual nonlinear frequency shifts of the spin-wave modes. Owing to its high degree of external controllability and scalability to larger sets of modes, this dynamical system provides a model platform for exploring nonlinear phenomena and a promising route toward rf driven state mapping relevant to neuromorphic and unconventional computing.
-
-### [EARL: Energy-Aware Optimization of Liquid State Machines for Pervasive AI](http://arxiv.org/abs/2601.05205v1)
-**2026-01-08** | *Zain Iqbal, Lorenzo Valerio*
-
-> Pervasive AI increasingly depends on on-device learning systems that deliver low-latency and energy-efficient computation under strict resource constraints. Liquid State Machines (LSMs) offer a promising approach for low-power temporal processing in pervasive and neuromorphic systems, but their deployment remains challenging due to high hyperparameter sensitivity and the computational cost of traditional optimization methods that ignore energy constraints. This work presents EARL, an energy-aware reinforcement learning framework that integrates Bayesian optimization with an adaptive reinforcement learning based selection policy to jointly optimize accuracy and energy consumption. EARL employs surrogate modeling for global exploration, reinforcement learning for dynamic candidate prioritization, and an early termination mechanism to eliminate redundant evaluations, substantially reducing computational overhead. Experiments on three benchmark datasets demonstrate that EARL achieves 6 to 15 percent higher accuracy, 60 to 80 percent lower energy consumption, and up to an order of magnitude reduction in optimization time compared to leading hyperparameter tuning frameworks. These results highlight the effectiveness of energy-aware adaptive search in improving the efficiency and scalability of LSMs for resource-constrained on-device AI applications.
-
 ---
 
 ## 👁️ Applications & Sensing
+
+### [A Brain-inspired Embodied Intelligence for Fluid and Fast Reflexive Robotics Control](http://arxiv.org/abs/2601.14628v1)
+**2026-01-21** | *Weiyu Guo, He Zhang, Pengteng Li et al.*
+
+> Recent advances in embodied intelligence have leveraged massive scaling of data and model parameters to master natural-language command following and multi-task control. In contrast, biological systems demonstrate an innate ability to acquire skills rapidly from sparse experience. Crucially, current robotic policies struggle to replicate the dynamic stability, reflexive responsiveness, and temporal memory inherent in biological motion. Here we present Neuromorphic Vision-Language-Action (NeuroVLA), a framework that mimics the structural organization of the bio-nervous system between the cortex, cerebellum, and spinal cord. We adopt a system-level bio-inspired design: a high-level model plans goals, an adaptive cerebellum module stabilizes motion using high-frequency sensors feedback, and a bio-inspired spinal layer executes lightning-fast actions generation. NeuroVLA represents the first deployment of a neuromorphic VLA on physical robotics, achieving state-of-the-art performance. We observe the emergence of biological motor characteristics without additional data or special guidance: it stops the shaking in robotic arms, saves significant energy(only 0.4w on Neuromorphic Processor), shows temporal memory ability and triggers safety reflexes in less than 20 milliseconds.
 
 ### [Optical Linear Systems Framework for Event Sensing and Computational Neuromorphic Imaging](http://arxiv.org/abs/2601.13498v1)
 **2026-01-20** | *Nimrod Kruger, Nicholas Owen Ralph, Gregory Cohen et al.*
