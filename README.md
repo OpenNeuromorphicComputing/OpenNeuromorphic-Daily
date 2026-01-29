@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-01-28 08:31 UTC
+**Automated Daily Update** | Last Run: 2026-01-29 08:38 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -124,6 +124,11 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 👁️ Applications & Sensing
 
+### [NeuroAI and Beyond](http://arxiv.org/abs/2601.19955v1)
+**2026-01-27** | *Jean-Marc Fellous, Gert Cauwenberghs, Cornelia Fermüller et al.*
+
+> Neuroscience and Artificial Intelligence (AI) have made significant progress in the past few years but have only been loosely inter-connected. Based on a workshop held in August 2025, we identify current and future areas of synergism between these two fields. We focus on the subareas of embodiment, language and communication, robotics, learning in humans and machines and Neuromorphic engineering to take stock of the progress made so far, and possible promising new future avenues. Overall, we advocate for the development of NeuroAI, a type of Neuroscience-informed Artificial Intelligence that, we argue, has the potential for significantly improving the scope and efficiency of AI algorithms while simultaneously changing the way we understand biological neural computations. We include personal statements from several leading researchers on their diverse views of NeuroAI. Two Strength-Weakness-Opportunities-Threat (SWOT) analyses by researchers and trainees are appended that describe the benefits and risks offered by NeuroAI.
+
 ### [Neuromorphic BrailleNet: Accurate and Generalizable Braille Reading Beyond Single Characters through Event-Based Optical Tactile Sensing](http://arxiv.org/abs/2601.19079v1)
 **2026-01-27** | *Naqash Afzal, Niklas Funk, Erik Helmut et al.*
 
@@ -158,11 +163,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-01-19** | *Mahmud S. Zango, Jianglin Lan*
 
 > Autonomous navigation for nano-scale unmanned aerial vehicles (nano-UAVs) is governed by extreme Size, Weight, and Power (SWaP) constraints (with the weight < 50 g and sub-100 mW onboard processor), distinguishing it fundamentally from standard robotic paradigms. This review synthesizes the state-of-the-art in sensing, computing, and control architectures designed specifically for these sub- 100mW computational envelopes. We critically analyse the transition from classical geometry-based methods to emerging "Edge AI" paradigms, including quantized deep neural networks deployed on ultra-low-power System-on-Chips (SoCs) and neuromorphic event-based control. Beyond algorithms, we evaluate the hardware-software co-design requisite for autonomy, covering advancements in dense optical flow, optimized Simultaneous Localization and Mapping (SLAM), and learning-based flight control. While significant progress has been observed in visual navigation and relative pose estimation, our analysis reveals persistent gaps in long-term endurance, robust obstacle avoidance in dynamic environments, and the "Sim-to-Real" transfer of reinforcement learning policies. This survey provides a roadmap for bridging these gaps, advocating for hybrid architectures that fuse lightweight classical control with data-driven perception to enable fully autonomous, agile nano-UAVs in GPS-denied environments.
-
-### [UEOF: A Benchmark Dataset for Underwater Event-Based Optical Flow](http://arxiv.org/abs/2601.10054v1)
-**2026-01-15** | *Nick Truong, Pritam P. Karmokar, William J. Beksi*
-
-> Underwater imaging is fundamentally challenging due to wavelength-dependent light attenuation, strong scattering from suspended particles, turbidity-induced blur, and non-uniform illumination. These effects impair standard cameras and make ground-truth motion nearly impossible to obtain. On the other hand, event cameras offer microsecond resolution and high dynamic range. Nonetheless, progress on investigating event cameras for underwater environments has been limited due to the lack of datasets that pair realistic underwater optics with accurate optical flow. To address this problem, we introduce the first synthetic underwater benchmark dataset for event-based optical flow derived from physically-based ray-traced RGBD sequences. Using a modern video-to-event pipeline applied to rendered underwater videos, we produce realistic event data streams with dense ground-truth flow, depth, and camera motion. Moreover, we benchmark state-of-the-art learning-based and model-based optical flow prediction methods to understand how underwater light transport affects event formation and motion estimation accuracy. Our dataset establishes a new baseline for future development and evaluation of underwater event-based perception algorithms. The source code and dataset for this project are publicly available at https://robotic-vision-lab.github.io/ueof.
 
 ---
 
