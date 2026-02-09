@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-02-08 08:32 UTC
+**Automated Daily Update** | Last Run: 2026-02-09 08:52 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -71,19 +71,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > Reinforcement learning (RL) is a core technology enabling the transition of artificial intelligence (AI) from perception to decision-making, but its deployment on conventional electronic hardware suffers from high latency and energy consumption imposed by the von Neumann architecture. Here, we propose a photonic spiking twin delayed deep deterministic policy gradient (TD3) reinforcement learning architecture for neuromorphic autonomous navigation and experimentally validate it on a distributed feedback laser with a saturable absorber (DFB-SA) array. The hybrid architecture integrates a photonic spiking Actor network with dual continuous-valued Critic networks, where the final nonlinear spiking activation layer of the Actor is deployed on the DFB-SA laser array. In autonomous navigation tasks, the system achieves an average reward of 58.22 plus-minus 17.29 and a success rate of 80% plus-minus 8.3%. Hardware-software co-inference demonstrates an estimated energy consumption of 0.78 nJ/inf and an ultra-low latency of 191.20 ps/inf, with co-inference error rates of 0.051% and 0.059% in task scenarios with and without obstacle interference, respectively. Simulations for error-activated channels show full agreement with the expected responses, validating the dynamic characteristics of the DFB-SA laser. The architecture shows strong potential for integration with large-scale photonic linear computing chips, enabling fully-functional photonic computation and low-power, low-latency neuromorphic autonomous navigation.
 
-### [System-Level Performance Modeling of Photonic In-Memory Computing](http://arxiv.org/abs/2602.00892v1)
-**2026-01-31** | *Jebacyril Arockiaraj, Sasindu Wijeratne, Sugeet Sunder et al.*
-
-> Photonic in-memory computing is a high-speed, low-energy alternative to traditional transistor-based digital computing that utilizes high photonic operating frequencies and bandwidths. In this work, we develop a comprehensive system-level performance model for photonic in-memory computing, capturing the effects of key latency sources such as external memory access and opto-electronic conversion. We perform algorithm-to-hardware mapping across a range of workloads, including the Sod shock tube problem, Matricized Tensor Times Khatri-Rao Product (MTTKRP), and the Vlasov-Maxwell equation, to evaluate how the latencies impact real-world high-performance computing workloads. Our performance model shows that, while accounting for system overheads, a compact 1x256 bit single-wavelength photonic SRAM array, fabricated using the standard silicon photonics process by GlobalFoundries, sustains up to 1.5 TOPS, 0.9 TOPS, and 1.3 TOPS on the Sod shock tube problem, MTTKRP, and the Vlasov-Maxwell equation with an average energy efficiency of 2.5 TOPS/W.
-
-### [An Open-Source Framework for Measurement and Analysis of Nanoscale Ionic Transport](http://arxiv.org/abs/2602.00806v1)
-**2026-01-31** | *Yichao Wang, Munan Fang, Aziz Roshanbhai Lokhandwala et al.*
-
-> Nanofluidic systems exploit nanometre-scale confinement in channels and pores to regulate ionic transport, enabling functionalities such as osmotic energy harvesting and neuromorphic ionic memory. Studying such confined transport requires both precise electrical instrumentation and careful data analysis, yet, in practice, measurements are still often taken with vendor software, exported as files, and processed later in separate environments. In this work, we bring these steps together in a unified Python-based framework built around three interoperable graphical user interfaces (GUIs) for nanochannel, nanopore and memristor experiments. The framework is organised into two functional parts, measurement and analysis. On the measurement side, two GUIs drive Keithley Source Meters to run continuous voltage sweeps and user-defined memristive pulse sequences, while providing live plots, configuration management and controlled shutdown routines. On the analysis side, a dedicated nanochannel and nanopore GUI reads raw I-V datasets, applies unit-consistent processing, extracts conductance and ion mobility, evaluates selectivity and osmotic power, and is complemented by a web-based calculator that performs the same mobility analysis without a local Python installation. All three GUIs are implemented in Python/Tkinter with modular plotting and logging layers so that flexible control sequences and physics-based post-processing share a common data format, improving reproducibility, timing stability and day-to-day efficiency in nanofluidic and electronic device studies.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [Sparse Spike Encoding of Channel Responses for Energy Efficient Human Activity Recognition](http://arxiv.org/abs/2602.06766v1)
+**2026-02-06** | *Eleonora Cicciarella, Riccardo Mazzieri, Jacopo Pegoraro et al.*
+
+> ISAC enables pervasive monitoring, but modern sensing algorithms are often too complex for energy-constrained edge devices. This motivates the development of learning techniques that balance accuracy performance and energy efficiency. Spiking Neural Networks (SNNs) are a promising alternative, processing information as sparse binary spike trains and potentially reducing energy consumption by orders of magnitude. In this work, we propose a spiking convolutional autoencoder (SCAE) that learns tailored spike-encoded representations of channel impulse responses (CIR), jointly trained with an SNN for human activity recognition (HAR), thereby eliminating the need for Doppler domain preprocessing. The results show that our SCAE-SNN achieves F1 scores comparable to a hybrid approach (almost 96%), while producing substantially sparser spike encoding (81.1% sparsity). We also show that encoding CIR data prior to classification improves both HAR accuracy and efficiency. The code is available at https://github.com/ele-ciccia/SCAE-SNN-HAR.
 
 ### [Time Is All It Takes: Spike-Retiming Attacks on Event-Driven Spiking Neural Networks](http://arxiv.org/abs/2602.03284v1)
 **2026-02-03** | *Yi Yu, Qixin Zhang, Shuhan Ye et al.*
@@ -138,6 +133,11 @@ Papers are automatically categorized by topic and sorted by date.
 ---
 
 ## 👁️ Applications & Sensing
+
+### [A neuromorphic model of the insect visual system for natural image processing](http://arxiv.org/abs/2602.06405v1)
+**2026-02-06** | *Adam D. Hines, Karin Nordström, Andrew B. Barron*
+
+> Insect vision supports complex behaviors including associative learning, navigation, and object detection, and has long motivated computational models for understanding biological visual processing. However, many contemporary models prioritize task performance while neglecting biologically grounded processing pathways. Here, we introduce a bio-inspired vision model that captures principles of the insect visual system to transform dense visual input into sparse, discriminative codes. The model is trained using a fully self-supervised contrastive objective, enabling representation learning without labeled data and supporting reuse across tasks without reliance on domain-specific classifiers. We evaluated the resulting representations on flower recognition tasks and natural image benchmarks. The model consistently produced reliable sparse codes that distinguish visually similar inputs. To support different modelling and deployment uses, we have implemented the model as both an artificial neural network and a spiking neural network. In a simulated localization setting, our approach outperformed a simple image downsampling comparison baseline, highlighting the functional benefit of incorporating neuromorphic visual processing pathways. Collectively, these results advance insect computational modelling by providing a generalizable bio-inspired vision model capable of sparse computation across diverse tasks.
 
 ### [Neuro-Inspired Visual Pattern Recognition via Biological Reservoir Computing](http://arxiv.org/abs/2602.05737v1)
 **2026-02-05** | *Luca Ciampi, Ludovico Iannello, Fabrizio Tonelli et al.*
