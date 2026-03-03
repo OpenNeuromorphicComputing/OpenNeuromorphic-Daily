@@ -1,10 +1,20 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-03-02 08:43 UTC
+**Automated Daily Update** | Last Run: 2026-03-03 08:39 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
 ## 🛠 Hardware & Materials
+
+### [Implicitly Parallel Neuromorphic Solver Design for Constraint Satisfaction Problems](http://arxiv.org/abs/2603.01150v1)
+**2026-03-01** | *Recep Bugra Uludag, Ahmet Efe, Ismail Akturk et al.*
+
+> Many real-life problems of practical importance -- spanning a wide range of applications from chip design to bioinformatics -- represent constraint satisfaction problems, where classical solvers have to rely on heuristic approximations due to the computational complexity. Neuromorphic solvers, on the other hand, offer a unique alternative representation which enables an inherently parallel exploration of the solution space. This paper provides a theoretical characterization and experimental demonstration of this native type of parallelism that is hard to apply to classical solvers. We observe that more than two orders of magnitude faster operation is possible without compromising solution accuracy. Our study represents the first step toward bridging the theory vs. practice gap to unlock the performance potential of emerging neuromorphic solvers.
+
+### [Non-reciprocal properties of 2D superconductors](http://arxiv.org/abs/2603.01011v1)
+**2026-03-01** | *Xingrong Ren, Huiqing Ye, Tian Le*
+
+> Two-dimensional (2D) superconductors, characterized by their inherent quantum confinement, strong spin-orbit coupling, and diverse forms of symmetry breaking, provide an ideal platform for exploring novel quantum transport phenomena. This review summarizes recent experimental progress in the non-reciprocal properties of 2D superconductors, focusing on second harmonic resistance in the resistive superconducting state and the supercurrent diode effect (SDE) in the dissipationless superconducting regime. We discuss the various origins of these phenomena, distinguishing between intrinsic mechanisms, such as finite-momentum Cooper pairing, and extrinsic mechanisms driven by asymmetric vortex dynamics and device geometry. We present a systematic classification of zero-field SDE into polarity-reversed and polarity-locked behaviors, a distinction governed by the interplay between intrinsic time-reversal symmetry breaking and external magnetic response. Furthermore, we examine how the efficiency and polarity of SDE are modulated by tuning parameters including magnetic/electric fields, strain, device geometry, thermodynamic conditions, and microwave irradiation. We conclude by highlighting the application potential of these tunable diodes in high-efficiency rectification, superconducting logic, and neuromorphic computing.
 
 ### [Tuning the memristive response of TaO$_x$-based devices with Ag Nanoparticles](http://arxiv.org/abs/2602.24168v1)
 **2026-02-27** | *R. Leal Martir, A. J. T. van der Ree, M. H. Aguirre et al.*
@@ -55,11 +65,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-02-17** | *Ryan Wong, Ben Feinberg, Saugata Ghose*
 
 > Analog processing-using-memory (PUM; a.k.a. in-memory computing) makes use of electrical interactions inside memory arrays to perform bulk matrix-vector multiplication (MVM) operations. However, many popular matrix-based kernels need to execute non-MVM operations, which analog PUM cannot directly perform. To retain its energy efficiency, analog PUM architectures augment memory arrays with CMOS-based domain-specific fixed-function hardware to provide complete kernel functionality, but the difficulty of integrating such specialized CMOS logic with memory arrays has largely limited analog PUM to being an accelerator for machine learning inference, or for closely related kernels. An opportunity exists to harness analog PUM for general-purpose computation: recent works have shown that memory arrays can also perform Boolean PUM operations, albeit with very different supporting hardware and electrical signals than analog PUM.   We propose DARTH-PUM, a general-purpose hybrid PUM architecture that tackles key hardware and software challenges to integrating analog PUM and digital PUM. We propose optimized peripheral circuitry, coordinating hardware to manage and interface between both types of PUM, an easy-to-use programming interface, and low-cost support for flexible data widths. These design elements allow us to build a practical PUM architecture that can execute kernels fully in memory, and can scale easily to cater to domains ranging from embedded applications to large-scale data-driven computing. We show how three popular applications (AES encryption, convolutional neural networks, large-language models) can map to and benefit from DARTH-PUM, with speedups of 59.4x, 14.8x, and 40.8x over an analog+CPU baseline.
-
-### [Memristive tabular variational autoencoder for compression of analog data in high energy physics](http://arxiv.org/abs/2602.15990v1)
-**2026-02-17** | *Rajat Gupta, Yuvaraj Elangovan, Tae Min Hong et al.*
-
-> We present an implementation of edge AI to compress data on an in-memory analog content-addressable memory (ACAM) device. A variational autoencoder is trained on a simulated sample of energy measurements from incident high-energy electrons on a generic three-layer scintillator-based calorimeter. The encoding part is distilled into tabular format by regressing the latent space variables using decision trees, which is then programmed on a memristor-based ACAM. In real-time, the ACAM compresses 48 continuously valued incoming energies measured by the calorimeter sensors into the latent space, achieving a compression factor of 12x, which is transmitted off-detector for decompression. The performance result of the ACAM, obtained using the Structural Simulation Toolkit, the SST open source framework, gives a latency value of 24 ns and a throughput of 330M compressions per second, i.e., 3 ns between successive inputs, and an average energy consumption of 4.1 nJ per compression.
 
 ---
 
@@ -124,6 +129,11 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 👁️ Applications & Sensing
 
+### [TP-Spikformer: Token Pruned Spiking Transformer](http://arxiv.org/abs/2603.00527v1)
+**2026-02-28** | *Wenjie Wei, Xiaolong Zhou, Malu Zhang et al.*
+
+> Spiking neural networks (SNNs) offer an energy-efficient alternative to traditional neural networks due to their event-driven computing paradigm. However, recent advancements in spiking transformers have focused on improving accuracy with large-scale architectures, which require significant computational resources and limit deployment on resource-constrained devices. In this paper, we propose a simple yet effective token pruning method for spiking transformers, termed TP-Spikformer, that reduces storage and computational overhead while maintaining competitive performance. Specifically, we first introduce a heuristic spatiotemporal information-retaining criterion that comprehensively evaluates tokens' importance, assigning higher scores to informative tokens for retention and lower scores to uninformative ones for pruning. Based on this criterion, we propose an information-retaining token pruning framework that employs a block-level early stopping strategy for uninformative tokens, instead of removing them outright. This also helps preserve more information during token pruning. We demonstrate the effectiveness, efficiency and scalability of TP-Spikformer through extensive experiments across diverse architectures, including Spikformer, QKFormer and Spike-driven Transformer V1 and V3, and a range of tasks such as image classification, object detection, semantic segmentation and event-based object tracking. Particularly, TP-Spikformer performs well in a training-free manner. These results reveal its potential as an efficient and practical solution for deploying SNNs in real-world applications with limited computational resources.
+
 ### [SpikingTac: A Miniaturized Neuromorphic Visuotactile Sensor for High-Precision Dynamic Tactile Imprint Tracking](http://arxiv.org/abs/2602.23654v1)
 **2026-02-27** | *Tianyu Jiang, Chaofan Zhang, Shaolin Zhang et al.*
 
@@ -153,20 +163,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-02-18** | *Kamil Jeziorek, Piotr Wzorek, Krzysztof Blachut et al.*
 
 > As the volume of data recorded by embedded edge sensors increases, particularly from neuromorphic devices producing discrete event streams, there is a growing need for hardware-aware neural architectures that enable efficient, low-latency, and energy-conscious local processing. We present an FPGA implementation of event-graph neural networks for audio processing. We utilise an artificial cochlea that converts time-series signals into sparse event data, reducing memory and computation costs. Our architecture was implemented on a SoC FPGA and evaluated on two open-source datasets. For classification task, our baseline floating-point model achieves 92.7% accuracy on SHD dataset - only 2.4% below the state of the art - while requiring over 10x and 67x fewer parameters. On SSC, our models achieve 66.9-71.0% accuracy. Compared to FPGA-based spiking neural networks, our quantised model reaches 92.3% accuracy, outperforming them by up to 19.3% while reducing resource usage and latency. For SSC, we report the first hardware-accelerated evaluation. We further demonstrate the first end-to-end FPGA implementation of event-audio keyword spotting, combining graph convolutional layers with recurrent sequence modelling. The system achieves up to 95% word-end detection accuracy, with only 10.53 microsecond latency and 1.18 W power consumption, establishing a strong benchmark for energy-efficient event-driven KWS.
-
-### [Neurosim: A Fast Simulator for Neuromorphic Robot Perception](http://arxiv.org/abs/2602.15018v1)
-**2026-02-16** | *Richeek Das, Pratik Chaudhari*
-
-> Neurosim is a fast, real-time, high-performance library for simulating sensors such as dynamic vision sensors, RGB cameras, depth sensors, and inertial sensors. It can also simulate agile dynamics of multi-rotor vehicles in complex and dynamic environments. Neurosim can achieve frame rates as high as ~2700 FPS on a desktop GPU. Neurosim integrates with a ZeroMQ-based communication library called Cortex to facilitate seamless integration with machine learning and robotics workflows. Cortex provides a high-throughput, low-latency message-passing system for Python and C++ applications, with native support for NumPy arrays and PyTorch tensors. This paper discusses the design philosophy behind Neurosim and Cortex. It demonstrates how they can be used to (i) train neuromorphic perception and control algorithms, e.g., using self-supervised learning on time-synchronized multi-modal data, and (ii) test real-time implementations of these algorithms in closed-loop. Neurosim and Cortex are available at https://github.com/grasp-lyrl/neurosim .
-
----
-
-## 📂 General / Uncategorized
-
-### [LAND: A Longitudinal Analysis of Neuromorphic Datasets](http://arxiv.org/abs/2602.15973v1)
-**2026-02-17** | *Gregory Cohen, Alexandre Marcireau*
-
-> Neuromorphic engineering has a data problem. Despite the meteoric rise in the number of neuromorphic datasets published over the past ten years, the conclusion of a significant portion of neuromorphic research papers still states that there is a need for yet more data and even larger datasets. Whilst this need is driven in part by the sheer volume of data required by modern deep learning approaches, it is also fuelled by the current state of the available neuromorphic datasets and the difficulties in finding them, understanding their purpose, and determining the nature of their underlying task. This is further compounded by practical difficulties in downloading and using these datasets. This review starts by capturing a snapshot of the existing neuromorphic datasets, covering over 423 datasets, and then explores the nature of their tasks and the underlying structure of the presented data. Analysing these datasets shows the difficulties arising from their size, the lack of standardisation, and difficulties in accessing the actual data. This paper also highlights the growth in the size of individual datasets and the complexities involved in working with the data. However, a more important concern is the rise of synthetic datasets, created by either simulation or video-to-events methods. This review explores the benefits of simulated data for testing existing algorithms and applications, highlighting the potential pitfalls for exploring new applications of neuromorphic technologies. This review also introduces the concepts of meta-datasets, created from existing datasets, as a way of both reducing the need for more data, and to remove potential bias arising from defining both the dataset and the task.
 
 ---
 
