@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-03-08 08:30 UTC
+**Automated Daily Update** | Last Run: 2026-03-09 08:42 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -139,6 +139,11 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 👁️ Applications & Sensing
 
+### [Low-latency Event-based Object Detection with Spatially-Sparse Linear Attention](http://arxiv.org/abs/2603.06228v1)
+**2026-03-06** | *Haiqing Hao, Zhipeng Sui, Rong Zou et al.*
+
+> Event cameras provide sequential visual data with spatial sparsity and high temporal resolution, making them attractive for low-latency object detection. Existing asynchronous event-based neural networks realize this low-latency advantage by updating predictions event-by-event, but still suffer from two bottlenecks: recurrent architectures are difficult to train efficiently on long sequences, and improving accuracy often increases per-event computation and latency. Linear attention is appealing in this setting because it supports parallel training and recurrent inference. However, standard linear attention updates a global state for every event, yielding a poor accuracy-efficiency trade-off, which is problematic for object detection, where fine-grained representations and thus states are preferred. The key challenge is therefore to introduce sparse state activation that exploits event sparsity while preserving efficient parallel training. We propose Spatially-Sparse Linear Attention (SSLA), which introduces a mixture-of-spaces state decomposition and a scatter-compute-gather training procedure, enabling state-level sparsity as well as training parallelism. Built on SSLA, we develop an end-to-end asynchronous linear attention model, SSLA-Det, for event-based object detection. On Gen1 and N-Caltech101, SSLA-Det achieves state-of-the-art accuracy among asynchronous methods, reaching 0.375 mAP and 0.515 mAP, respectively, while reducing per-event computation by more than 20 times compared to the strongest prior asynchronous baseline, demonstrating the potential of linear attention for low-latency event-based vision.
+
 ### [TP-Spikformer: Token Pruned Spiking Transformer](http://arxiv.org/abs/2603.00527v1)
 **2026-02-28** | *Wenjie Wei, Xiaolong Zhou, Malu Zhang et al.*
 
@@ -158,11 +163,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-02-26** | *Paul Kielty, Timothy Hanley, Peter Corcoran*
 
 > Event cameras record luminance changes with microsecond resolution, but converting their sparse, asynchronous output into dense tensors that neural networks can exploit remains a core challenge. Conventional histograms or globally-decayed time-surface representations apply fixed temporal parameters across the entire image plane, which in practice creates a trade-off between preserving spatial structure during still periods and retaining sharp edges during rapid motion. We introduce Locally Adaptive Decay Surfaces (LADS), a family of event representations in which the temporal decay at each location is modulated according to local signal dynamics. Three strategies are explored, based on event rate, Laplacian-of-Gaussian response, and high-frequency spectral energy. These adaptive schemes preserve detail in quiescent regions while reducing blur in regions of dense activity. Extensive experiments on the public data show that LADS consistently improves both face detection and facial landmark accuracy compared to standard non-adaptive representations. At 30 Hz, LADS achieves higher detection accuracy and lower landmark error than either baseline, and at 240 Hz it mitigates the accuracy decline typically observed at higher frequencies, sustaining 2.44 % normalized mean error for landmarks and 0.966 mAP50 in face detection. These high-frequency results even surpass the accuracy reported in prior works operating at 30 Hz, setting new benchmarks for event-based face analysis. Moreover, by preserving spatial structure at the representation stage, LADS supports the use of much lighter network architectures while still retaining real-time performance. These results highlight the importance of context-aware temporal integration for neuromorphic vision and point toward real-time, high-frequency human-computer interaction systems that exploit the unique advantages of event cameras.
-
-### [Real-time Motion Segmentation with Event-based Normal Flow](http://arxiv.org/abs/2602.20790v1)
-**2026-02-24** | *Sheng Zhong, Zhongyang Ren, Xiya Zhu et al.*
-
-> Event-based cameras are bio-inspired sensors with pixels that independently and asynchronously respond to brightness changes at microsecond resolution, offering the potential to handle visual tasks in challenging scenarios. However, due to the sparse information content in individual events, directly processing the raw event data to solve vision tasks is highly inefficient, which severely limits the applicability of state-of-the-art methods in real-time tasks, such as motion segmentation, a fundamental task for dynamic scene understanding. Incorporating normal flow as an intermediate representation to compress motion information from event clusters within a localized region provides a more effective solution. In this work, we propose a normal flow-based motion segmentation framework for event-based vision. Leveraging the dense normal flow directly learned from event neighborhoods as input, we formulate the motion segmentation task as an energy minimization problem solved via graph cuts, and optimize it iteratively with normal flow clustering and motion model fitting. By using a normal flow-based motion model initialization and fitting method, the proposed system is able to efficiently estimate the motion models of independently moving objects with only a limited number of candidate models, which significantly reduces the computational complexity and ensures real-time performance, achieving nearly a 800x speedup in comparison to the open-source state-of-the-art method. Extensive evaluations on multiple public datasets fully demonstrate the accuracy and efficiency of our framework.
 
 ---
 
