@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-03-24 08:52 UTC
+**Automated Daily Update** | Last Run: 2026-03-25 08:51 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -70,6 +70,16 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 🧠 Algorithms & Theory
 
+### [A Latency Coding Framework for Deep Spiking Neural Networks with Ultra-Low Latency](http://arxiv.org/abs/2603.23206v1)
+**2026-03-24** | *Yi Lu, Jianhao Ding, Zhaofei Yu*
+
+> Spiking neural networks (SNNs) offer a biologically inspired computing paradigm with significant potential for energy-efficient neural processing. Among neural coding schemes of SNNs, Time-To-First-Spike (TTFS) coding, which encodes information through the precise timing of a neuron's first spike, provides exceptional energy efficiency and biological plausibility. Despite its theoretical advantages, existing TTFS models lack efficient training methods, suffering from high inference latency and limited performance. In this work, we present a comprehensive framework, which enables the efficient training of deep TTFS-coded SNNs by employing backpropagation throuh time (BPTT) algorithm. We name the generalized TTFS coding method in our framework as latency coding. The framework includes: (1) a latency encoding (LE) module with feature extraction and straight-through estimators to address severe information loss in direct intensity-to-latency mapping and ensure smooth gradient flow; (2) relaxation of the strict single-spike constraint of traditional TTFS, allowing neurons of intermediate layers to fire multiple times to mitigating gradient vanishing in deep networks; (3) a temporal adaptive decision (TAD) loss function that dynamically weights supervision signals based on sample-dependent confidence, resolving the incompatibility between latency coding and standard cross-entropy loss. Experimental results demonstrate that our method achieves state-of-the-art accuracy in comparison to existing TTFS-coded SNNs with ultra-low inference latency and superior energy efficiency. The framework also demonstrates improved robustness against input corruptions. Our study investigates the characteristics and potential of latency coding in scenarios demanding rapid response, providing valuable insights for further exploiting the temporal learning capabilities of SNNs.
+
+### [Spiking Personalized Federated Learning for Brain-Computer Interface-Enabled Immersive Communication](http://arxiv.org/abs/2603.22727v1)
+**2026-03-24** | *Chen Shang, Dinh Thai Hoang, Diep N. Nguyen et al.*
+
+> This work proposes a novel immersive communication framework that leverages brain-computer interface (BCI) to acquire brain signals for inferring user-centric states (e.g., intention and perception-related discomfort), thereby enabling more personalized and robust immersive adaptation under strong individual variability. Specifically, we develop a personalized federated learning (PFL) model to analyze and process the collected brain signals, which not only accommodates neurodiverse brain-signal data but also prevents the leakage of sensitive brain-signal information. To address the energy bottleneck of continual on-device learning and inference on energy-limited immersive terminals (e.g., head-mounted display), we further embed spiking neural networks (SNNs) into the PFL. By exploiting sparse, event-driven spike computation, the SNN-enabled PFL reduces the computation and energy cost of training and inference while maintaining competitive personalization performance. Experiments on real brain-signal dataset demonstrate that our method achieves the best overall identification accuracy while reducing inference energy by 6.46$\times$ compared with conventional artificial neural network-based personalized baselines.
+
 ### [Optimal Memory Encoding Through Fluctuation-Response Structure](http://arxiv.org/abs/2603.21666v1)
 **2026-03-23** | *Lianxiang Cui, Kohei Nakajima, Kazuyuki Aihara*
 
@@ -130,11 +140,6 @@ Papers are automatically categorized by topic and sorted by date.
 
 > Spiking Neural Networks (SNNs) provide energy-efficient computation but their deployment is constrained by dense connectivity and high spiking operation costs. Existing magnitude-based pruning strategies, when naively applied to SNNs, fail to account for temporal accumulation, non-uniform timestep contributions, and membrane stability, often leading to severe performance degradation. This paper proposes Spiking Layer-Adaptive Magnitude-based Pruning (SLAMP), a theory-guided pruning framework that generalizes layer-adaptive magnitude pruning to temporal SNNs by explicitly controlling worst-case output distortion across layers and timesteps. SLAMP formulates sparsity allocation as a temporal distortion-constrained optimization problem, yielding time-aware layer importance scores that reduce to conventional layer-adaptive pruning in single-timestep limit. An efficient two-stage procedure is derived, combining temporal score estimation, global sparsity allocation, and magnitude pruning with retraining for stability recovery. Experiments on CIFAR10, CIFAR100, and the event-based CIFAR10-DVS datasets demonstrate that SLAMP achieves substantial connectivity and spiking operation reductions while preserving accuracy, enabling efficient and deployable SNN inference.
 
-### [Wi-Spike: A Low-power WiFi Human Multi-action Recognition Model with Spiking Neural Networks](http://arxiv.org/abs/2603.14475v1)
-**2026-03-15** | *Nengbo Zhang, Yao Ying, Lu Wang et al.*
-
-> WiFi-based human action recognition (HAR) has gained significant attention due to its non-intrusive and privacy-preserving nature. However, most existing WiFi sensing models predominantly focus on improving recognition accuracy, while issues of power consumption and energy efficiency remain insufficiently discussed. In this work, we present Wi-Spike, a bio-inspired spiking neural network (SNN) framework for efficient and accurate action recognition using WiFi channel state information (CSI) signals. Specifically, leveraging the event-driven and low-power characteristics of SNNs, Wi-Spike introduces spiking convolutional layers for spatio-temporal feature extraction and a novel temporal attention mechanism to enhance discriminative representation. The extracted features are subsequently encoded and classified through spiking fully connected layers and a voting layer. Comprehensive experiments on three benchmark datasets (NTU-Fi-HAR, NTU-Fi-HumanID, and UT-HAR) demonstrate that Wi-Spike achieves competitive accuracy in single-action recognition and superior performance in multi-action recognition tasks. As for energy consumption, Wi-Spike reduces the energy cost by at least half compared with other methods, while still achieving 95.83% recognition accuracy in human activity recognition. More importantly, Wi-Spike establishes a new state-of-the-art in WiFi-based multi-action HAR, offering a promising solution for real-time, energy-efficient edge sensing applications.
-
 ---
 
 ## 👁️ Applications & Sensing
@@ -158,15 +163,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-03-17** | *Maxime Vaillant, Axel Carlier, Lai Xing Ng et al.*
 
 > Event-based vision sensors provide significant advantages for high-speed perception, including microsecond temporal resolution, high dynamic range, and low power consumption. When combined with Spiking Neural Networks (SNNs), they can be deployed on neuromorphic hardware, enabling energy-efficient applications on embedded systems. However, this potential is severely limited by the scarcity of large-scale labeled datasets required to effectively train such models. In this work, we introduce SpikeCLR, a contrastive self-supervised learning framework that enables SNNs to learn robust visual representations from unlabeled event data. We adapt prior frame-based methods to the spiking domain using surrogate gradient training and introduce a suite of event-specific augmentations that leverage spatial, temporal, and polarity transformations. Through extensive experiments on CIFAR10-DVS, N-Caltech101, N-MNIST, and DVS-Gesture benchmarks, we demonstrate that self-supervised pretraining with subsequent fine-tuning outperforms supervised learning in low-data regimes, achieving consistent gains in few-shot and semi-supervised settings. Our ablation studies reveal that combining spatial and temporal augmentations is critical for learning effective spatio-temporal invariances in event data. We further show that learned representations transfer across datasets, contributing to efforts for powerful event-based models in label-scarce settings.
-
----
-
-## 📂 General / Uncategorized
-
-### [Trust-Region Noise Search for Black-Box Alignment of Diffusion and Flow Models](http://arxiv.org/abs/2603.14504v1)
-**2026-03-15** | *Niklas Schweiger, Daniel Cremers, Karnik Ram*
-
-> Optimizing the noise samples of diffusion and flow models is an increasingly popular approach to align these models to target rewards at inference time. However, we observe that these approaches are usually restricted to differentiable or cheap reward models, the formulation of the underlying pretrained generative model, or are memory/compute inefficient. We instead propose a simple trust-region based search algorithm (TRS) which treats the pre-trained generative and reward models as a black-box and only optimizes the source noise. Our approach achieves a good balance between global exploration and local exploitation, and is versatile and easily adaptable to various generative settings and reward models with minimal hyperparameter tuning. We evaluate TRS across text-to-image, molecule and protein design tasks, and obtain significantly improved output samples over the base generative models and other inference-time alignment approaches which optimize the source noise sample, or even the entire reverse-time sampling noise trajectories in the case of diffusion models. Our source code is publicly available.
 
 ---
 
