@@ -1,10 +1,15 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-04-05 08:41 UTC
+**Automated Daily Update** | Last Run: 2026-04-06 09:07 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
 ## 🛠 Hardware & Materials
+
+### [Biologically Realistic Dynamics for Nonlinear Classification in CMOS+X Neurons](http://arxiv.org/abs/2604.03187v1)
+**2026-04-03** | *Steven Louis, Hannah Bradley, Artem Litvinenko et al.*
+
+> Spiking neural networks encode information in spike timing and offer a pathway toward energy efficient artificial intelligence. However, a key challenge in spiking neural networks is realizing nonlinear and expressive computation in compact, energy-efficient hardware without relying on additional circuit complexity. In this work, we examine nonlinear computation in a CMOS+X spiking neuron implemented with a magnetic tunnel junction connected in series with an NMOS transistor. Circuit simulations of a multilayer network solving the XOR classification problem show that three intrinsic neuronal properties enable nonlinear behavior: threshold activation, response latency, and absolute refraction. Threshold activation determines which neurons participate in computation, response latency shifts spike timing, and absolute refraction suppresses subsequent spikes. These results show that magnetization dynamics of MTJ devices can support nonlinear computation in compact neuromorphic hardware.
 
 ### [Oscillator-Based Associative Memory with Exponential Capacity: Theory, Algorithms, and Hardware Implementation](http://arxiv.org/abs/2604.01469v1)
 **2026-04-01** | *Arie Ogranovich, Taosha Guo, Arvind R. Venkatakrishnan et al.*
@@ -46,14 +51,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > On-chip learning is key to scalable and adaptive neuromorphic systems, yet existing training methods are either difficult to implement in hardware or overly restrictive. However, recent studies show that feedback-control optimizers can enable expressive, on-chip training of neuromorphic devices. In this work, we present a proof-of-concept implementation of such feedback-control optimizers on a mixed-signal neuromorphic processor. We assess the proposed approach in an In-The-Loop(ITL) training setup on both a binary classification task and the nonlinear Yin-Yang problem, demonstrating on-chip training that matches the performance of numerical simulations and gradient-based baselines. Our results highlight the feasibility of feedback-driven, online learning under realistic mixed-signal constraints, and represent a co-design approach toward embedding such rules directly in silicon for autonomous and adaptive neuromorphic computing.
 
-### [State-space fading memory](http://arxiv.org/abs/2603.23814v1)
-**2026-03-25** | *Gustave Bainier, Antoine Chaillet, Rodolphe Sepulchre et al.*
-
-> The fading-memory (FM) property captures the progressive loss of influence of past inputs on a system's current output and has originally been formalized by Boyd and Chua in an operator-theoretic framework. Despite its importance for systems approximation, reservoir computing, and recurrent neural networks, its connection with state-space notions of nonlinear stability, especially incremental ones, remains understudied. This paper introduces a state-space definition of FM. In state-space, FM can be interpreted as an extension of incremental input-to-output stability ($δ$IOS) that explicitly incorporates a memory kernel upper-bounding the decay of past input differences. It is also closely related to Boyd and Chua's FM definition, with the sole difference of requiring uniform, instead of general, continuity of the memory functional with respect to an input-fading norm. We demonstrate that incremental input-to-state stability ($δ$ISS) implies FM semi-globally for time-invariant systems under an equibounded input assumption. Notably, Boyd and Chua's approximation theorems apply to delta-ISS state-space models. As a closing application, we show that, under mild assumptions, the state-space model of current-driven memristors possess the FM property.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [Neuromorphic Realization of Best Response in Finite-Action Games](http://arxiv.org/abs/2604.03222v1)
+**2026-04-03** | *Himani Sinhmar, Vaibhav Srivastava, Naomi Ehrich Leonard*
+
+> We develop a mechanistic dynamical-systems formulation of best response in finite-action games with relational structure on the action set. The proposed neuromorphic decision dynamics realize bestresponse as the stable outcome of an internal state-space process, rather than as an externally imposed choice rule. This provides a deterministic account of commitment formation, symmetry resolution through basins of attraction, and hysteresis and decision persistence under perturbations. For action spaces with circulant coupling, we prove using Lyapunov-Schmidt reduction that the action-coupling operator determines which components of evidence govern decision formation. We further show that the dynamics implicitly compute a geometry-aware utility, converge exponentially to the corresponding best response with rate independent of the number of actions, and switch only when evidence is sufficiently strong. In contrast, supplying the same geometry-aware utility directly to logit dynamics does not recover these properties, showing that relational structure must be embedded in the decision mechanism itself. We illustrate the framework in a repeated coverage game, prove that the induced game is an exact potential game, and show that its Nash equilibria are reached by the neuromorphic dynamics.
 
 ### [Spike-PTSD: A Bio-Plausible Adversarial Example Attack on Spiking Neural Networks via PTSD-Inspired Spike Scaling](http://arxiv.org/abs/2604.01750v1)
 **2026-04-02** | *Lingxin Jin, Wei Jiang, Maregu Assefa Habtie et al.*
@@ -104,11 +109,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-03-25** | *Longfei Guo, Pengbo Li, Ting Gao et al.*
 
 > With the rapid advancement of AI technology, we have seen more and more concerns on data privacy, leading to some cutting-edge research on machine learning with encrypted computation. Fully Homomorphic Encryption (FHE) is a crucial technology for privacy-preserving computation, while it struggles with continuous non-polynomial functions, as it operates on discrete integers and supports only addition and multiplication. Spiking Neural Networks (SNNs), which use discrete spike signals, naturally complement FHE's characteristics. In this paper, we introduce FHE-DiCSNN, a framework built on the TFHE scheme, utilizing the discrete nature of SNNs for secure and efficient computations. By leveraging bootstrapping techniques, we successfully implement Leaky Integrate-and-Fire (LIF) neuron models on ciphertexts, allowing SNNs of arbitrary depth. Our framework is adaptable to other spiking neuron models, offering a novel approach to homomorphic evaluation of SNNs. Additionally, we integrate convolutional methods inspired by CNNs to enhance accuracy and reduce the simulation time associated with random encoding. Parallel computation techniques further accelerate bootstrapping operations. Experimental results on the MNIST and FashionMNIST datasets validate the effectiveness of FHE-DiCSNN, with a loss of less than 3\% compared to plaintext, respectively, and computation times of under 1 second per prediction. We also apply the model into real medical image classification problems and analyze the parameter optimization and selection.
-
-### [A Latency Coding Framework for Deep Spiking Neural Networks with Ultra-Low Latency](http://arxiv.org/abs/2603.23206v1)
-**2026-03-24** | *Yi Lu, Jianhao Ding, Zhaofei Yu*
-
-> Spiking neural networks (SNNs) offer a biologically inspired computing paradigm with significant potential for energy-efficient neural processing. Among neural coding schemes of SNNs, Time-To-First-Spike (TTFS) coding, which encodes information through the precise timing of a neuron's first spike, provides exceptional energy efficiency and biological plausibility. Despite its theoretical advantages, existing TTFS models lack efficient training methods, suffering from high inference latency and limited performance. In this work, we present a comprehensive framework, which enables the efficient training of deep TTFS-coded SNNs by employing backpropagation throuh time (BPTT) algorithm. We name the generalized TTFS coding method in our framework as latency coding. The framework includes: (1) a latency encoding (LE) module with feature extraction and straight-through estimators to address severe information loss in direct intensity-to-latency mapping and ensure smooth gradient flow; (2) relaxation of the strict single-spike constraint of traditional TTFS, allowing neurons of intermediate layers to fire multiple times to mitigating gradient vanishing in deep networks; (3) a temporal adaptive decision (TAD) loss function that dynamically weights supervision signals based on sample-dependent confidence, resolving the incompatibility between latency coding and standard cross-entropy loss. Experimental results demonstrate that our method achieves state-of-the-art accuracy in comparison to existing TTFS-coded SNNs with ultra-low inference latency and superior energy efficiency. The framework also demonstrates improved robustness against input corruptions. Our study investigates the characteristics and potential of latency coding in scenarios demanding rapid response, providing valuable insights for further exploiting the temporal learning capabilities of SNNs.
 
 ---
 
