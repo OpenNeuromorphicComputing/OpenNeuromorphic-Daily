@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-04-08 09:00 UTC
+**Automated Daily Update** | Last Run: 2026-04-09 09:06 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -130,14 +130,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > Spiking Neural Networks (SNNs), characterized by their event-driven computation and low power consumption, have shown great potential for energy-efficient visual tracking on unmanned aerial vehicles (UAVs). However, existing efficient SNN-based trackers heavily rely on costly event cameras, limiting their deployment on UAVs. To address this limitation, we propose STATrack, an efficient fully spiking neural network framework for UAV visual tracking using RGB inputs only. To the best of our knowledge, this work is the first to investigate spiking neural networks for UAV visual tracking tasks. To mitigate the weakening of target features by background tokens, we propose adaptively maximizing the mutual information between templates and features. Extensive experiments on four widely used UAV tracking benchmarks demonstrate that STATrack achieves competitive tracking performance while maintaining low energy consumption.
 
-### [Self-Organized Optical Pathways in Optofluidic Photonic Crystals](http://arxiv.org/abs/2603.25845v1)
-**2026-03-26** | *Steven Motta*
-
-> This paper reports FDTD simulations of optofluidic reconfiguration in two-dimensional silicon photonic crystal waveguides, treating structural plasticity (the creation and destruction of optical pathways) via selective fluid infiltration. Using MPB eigenmode analysis, we decouple bandgap narrowing from defect-mode weakening, showing that defect weakening dominates (2.4 times faster transmission decay than bandgap narrowing at CS_2 indices). Infiltration topology controls signal routing (L-bend selectivity S = 0.98), though modulation depth is weak (Delta varepsilon/ varepsilon_ textSi = 11 %). A phenomenological optothermal feedback model produces self-organized pathways that achieve 63 % of a hand-designed waveguide's bandgap transmission (7.6 times the heavily suppressed empty-crystal baseline). Amplitude competition between counter-propagating sources produces strong, monotonic pathway steering (DeltaCOM_x from +0.03 to +4.92 ;a), while pulsed spike-timing-dependent plasticity yields a predictable null result: the timing-sensitive cross-term is suppressed by >10^2 when pulse delays exceed the temporal pulse width. The results provide benchmarks and identify physical limits for bio-inspired reconfigurable optofluidic photonics.
-
 ---
 
 ## 👁️ Applications & Sensing
+
+### [Time-Series Classification with Multivariate Statistical Dependence Features](http://arxiv.org/abs/2604.06537v1)
+**2026-04-08** | *Yao Sun, Bo Hu, Jose Principe*
+
+> In this paper, we propose a novel framework for non-stationary time-series analysis that replaces conventional correlation-based statistics with direct estimation of statistical dependence in the normalized joint density of input and target signals, the cross density ratio (CDR). Unlike windowed correlation estimates, this measure is independent of sample order and robust to regime changes. The method builds on the functional maximal correlation algorithm (FMCA), which constructs a projection space by decomposing the eigenspectrum of the CDR. Multiscale features from this eigenspace are classified using a lightweight single-hidden-layer perceptron. On the TI-46 digit speech corpus, our approach outperforms hidden Markov models (HMMs) and state-of-the-art spiking neural networks, achieving higher accuracy with fewer than 10 layers and a storage footprint under 5 MB.
 
 ### [Efficient Onboard Spacecraft Pose Estimation with Event Cameras and Neuromorphic Hardware](http://arxiv.org/abs/2604.04117v1)
 **2026-04-05** | *Arunkumar Rathinam, Jules Lecomte, Jost Reelsen et al.*
