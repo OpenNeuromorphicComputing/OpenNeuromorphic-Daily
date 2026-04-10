@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-04-09 09:06 UTC
+**Automated Daily Update** | Last Run: 2026-04-10 09:07 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -81,14 +81,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > Invertible logic can operate in one of two modes: 1) a forward mode, in which inputs are presented and a single, correct output is produced, and 2) a reverse mode, in which the output is fixed and the inputs take on values consistent with the output. It is possible to create invertible logic using various Boltzmann machine configurations. Such systems have been shown to solve certain challenging problems quickly, such as factorization and combinatorial optimization. In this paper, we show that invertible logic can be implemented using simple spiking neural networks based on stochastic computing. We present a design methodology for invertible stochastic gates, which can be implemented using a small amount of CMOS hardware. We demonstrate that our design can not only correctly implement basic gates with invertible capability, but can also be extended to construct invertible stochastic adder and multiplier circuits. Experimental results are presented which demonstrate correct operation of synthesizable invertible circuitry performing both multiplication and factorization, along with fabricated ASIC measurement results for an invertible multiplier circuit.
 
-### [VeRA+: Vector-Based Lightweight Digital Compensation for Drift-Resilient RRAM In-Memory Computing](http://arxiv.org/abs/2603.26016v1)
-**2026-03-27** | *Weirong Dong, Kai Zhou, Zhen Kong et al.*
-
-> RRAM-based in-memory computing (IMC) offers high energy efficiency but suffers from conductance drift that severely degrades long-term accuracy. Existing approaches including retraining, noise-aware training, and Batch Normalization (BN)-based calibration either require RRAM rewriting, demand large storage overhead, or rely on online correction. We propose VeRA+, a lightweight drift compensation framework that reuses shared projection matrices and introduces only two compact drift-specific vectors per drift level. A drift-aware scheduling algorithm offline-trains a small set of VeRA+ parameters and selects the appropriate set over time without any on-chip retraining or data replay. VeRA+ preserves up to 99.77% of the drift-free accuracy after ten years of simulated drift and reduces storage overhead by more than three orders of magnitude compared with BN-based calibration. To validate VeRA+ under realistic device behavior, we extract one-week drift statistics from measurements on our fabricated 1T1R RRAM devices and use them to simulate realistic drifted weights. Under these measured drift conditions, VeRA+ achieves accuracy close to the drift-free baseline, providing an efficient and practical solution for long-term drift resilience in RRAM-IMC.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [FlowEqProp: Training Flow Matching Generative Models with Gradient Equilibrium Propagation](http://arxiv.org/abs/2604.08150v1)
+**2026-04-09** | *Alex Gower*
+
+> We introduce Gradient Equilibrium Propagation (GradEP), a mechanism that extends Equilibrium Propagation (EP) to train energy gradients rather than energy minima, enabling EP to be applied to tasks where the learning objective depends on the velocity field of a convergent dynamical system. Instead of fixing the input during dynamics as in standard EP, GradEP introduces a spring potential that allows all units, including the visible units, to evolve, encoding the learned velocity in the equilibrium displacement. The spring and resulting nudge terms are both purely quadratic, preserving EP's hardware plausibility for neuromorphic implementation. As a first demonstration, we apply GradEP to flow matching for generative modelling - an approach we call FlowEqProp - training a two-hidden-layer MLP (24,896 parameters) on the Optical Recognition of Handwritten Digits dataset using only local equilibrium measurements and no backpropagation. The model generates recognisable digit samples across all ten classes with stable training dynamics. We further show that the time-independent energy landscape enables extended generation beyond the training horizon, producing sharper samples through additional inference-time computation - a property that maps naturally onto neuromorphic hardware, where longer relaxation yields higher-quality outputs. To our knowledge, this is the first demonstration of EP training a flow-based generative model.
 
 ### [L-SPINE: A Low-Precision SIMD Spiking Neural Compute Engine for Resource-efficient Edge Inference](http://arxiv.org/abs/2604.03626v1)
 **2026-04-04** | *Sonu Kumar, Mukul Lokhande, Santosh Kumar Vishvakarma*
