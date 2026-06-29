@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-06-28 10:26 UTC
+**Automated Daily Update** | Last Run: 2026-06-29 12:32 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -76,14 +76,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > We propose a spin-wave phase shifter controlled using a domain-wall racetrack. The concept is demonstrated using micromagnetic simulations of a Permalloy domain-wall racetrack placed above a YIG film. The stray field from pinned domain walls modifies the internal magnetic field in the YIG region under the racetrack. This leads to a local change of the spin-wave wavelength and thereby enables control of the phase accumulated by Damon-Eshbach spin waves propagating through the region. Moving domain walls on the racetrack, the same physical structure can provide phase shifts of up to +/-90 degrees, without changing the waveguide geometry. A model based on the semiclassical approximation confirms that the phase shift is dominated by the domain-wall-induced stray field. These results suggest a route toward a compact programmable spin-wave phase shifter for interference-based magnonic circuits for information processing. Moreover, the demonstrated magnonic device integration with a magnetic domain-wall racetrack can lead to its application in in-memory computing.
 
-### [ReRAM-aware Model Finetuning addressing I-V Non-linearity and Retention Errors](http://arxiv.org/abs/2606.17471v1)
-**2026-06-16** | *Ching-Yi Lin, Shamik Kundu, Arnab Raha et al.*
-
-> Traditional CPU, GPU, and NPU architectures are increasingly limited by the von Neumann bottleneck. While In-Memory Computing (IMC) using ReRAM crossbar arrays offers a high-density, energy-efficient alternative, its practical deployment is constrained through their non-idealities. Existing hardware-aware training frameworks often require training from scratch, which is computationally prohibitive for modern large-scale models. In this work, we propose a finetuning-based hardware-aware training algorithm that enables robust DNN deployment on ReRAM with minimal training overhead. Our approach mitigates I-V non-linearity by applying a range-shrunk sinh transformation and incorporates retention errors directly into a regularization loss during the finetuning process. We evaluate our framework across models and tasks such as image classification and question-answering (QA). Experimental results demonstrate that our method achieves similar accuracy on large-scale models like ResNet18 and DeiT-Tiny as the base model. In-case of ImageNet for MobileNetV3 families the technique has only less than 2% accuracy degradation. Further, applying the technique on the SQuAD v2 dataset results in only 1 point degradation of F-1 score.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks](http://arxiv.org/abs/2606.27807v1)
+**2026-06-26** | *Ruiqi Song, Dujun Nie, Siyu Teng et al.*
+
+> Vision-Language-Action (VLA) models have become a dominant paradigm for embodied intelligence. However, most existing approaches are built on large-scale transformers, resulting in substantial inference latency and energy consumption that limit their practical deployment in low-power, real-time scenarios. We propose SpikeVLA, a spiking VLA architecture for embodied navigation with energy-efficient inference, consisting of three key components. (i) A spiking vision encoder, Spike-V, that replaces dense continuous layers with event-driven spiking layers to reduce the energy consumption of visual representation learning. (ii) A multi-modal spiking large language model, Spike-L, that reformulates cross-modal reasoning with spiking dynamics and token-level event-driven sparsity to further lower computational cost. (iii) A spiking action policy network, Spike-A employs Laplacian-kernel population coding with a multi-layer fully connected SNN, and decodes spiking activities into stable and robust continuous control with energy-efficient inference under low-power constraints. Experiments on navigation and robotic control tasks show that SpikeVLA significantly reduces energy consumption and computational cost while maintaining competitive performance, highlighting its potential for low-power, real-time embodied intelligence.
 
 ### [SpikeTimer: Exploring Active Copyright Protection in Spiking Neural Networks via Temporal Backdoor Regularization](http://arxiv.org/abs/2606.26841v1)
 **2026-06-25** | *Xiao Yang, Gaolei Li, Jun Wu et al.*
@@ -134,6 +134,11 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 👁️ Applications & Sensing
 
+### [DeLux: Cross-Modal Local Artifact Restoration in Video Using Neuromorphic Data](http://arxiv.org/abs/2606.27576v1)
+**2026-06-25** | *Bartosz Stachowiak, Dariusz Brzezinski*
+
+> Conventional RGB cameras suffer from lighting artifacts such as flare, glare, flicker, and overexposure, leading to irrecoverable information loss that necessitates computational restoration. However, existing approaches treat these problems in isolation, failing to recover structural details completely obscured by complex spatially discrete image degradations. In this paper, we propose a novel cross-modal restoration paradigm and present DeLux, a modular proof-of-concept pipeline that leverages neuromorphic event streams as a structural prior to guide the targeted detection and inpainting of lighting artifacts in RGB video. Validation on synthetic benchmarks and real-world automotive footage demonstrates that DeLux effectively suppresses local artifacts and restores affected regions. The proposed approach outperforms existing RGB-only baselines and event-guided HDR models, achieving an average MS-SSIM of over 0.99 across all artifact types and demonstrating up to an 88% reduction in artifact severity in real-world automotive footage. The synthetic artifact generation tools and curated real-world evaluation datasets are made publicly available to foster future research on cross-modal restoration.
+
 ### [FracEvent: Event-Camera Simulation via Fractional-Relaxation Pixel Dynamics](http://arxiv.org/abs/2606.26636v1)
 **2026-06-25** | *Langyi Chen, Chuanzhi Xu, Haoxian Zhou et al.*
 
@@ -158,11 +163,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-06-17** | *Diego Hernández, Sebastián Valdivia, Vicente Westerhout et al.*
 
 > The escalating congestion in orbital space demands advanced monitoring solutions. This work presents a comprehensive open-source framework for neuromorphic resident space object (RSO) detection, adapting the foundational grid clustering algorithm for FPGA acceleration. The system integrates a single event-based camera (EBC) with a custom, distributed processing architecture, where rapid spatial quantization is executed in programmable logic (FPGA) and cluster formation is managed by a software client. We validate this architecture through systematic sampling of night-sky observations from the EVAS dataset, demonstrating 97% detection accuracy for RSOs. The implementation, which serves as a foundational toolkit for event-based FPGA processing, achieves efficient throughput with a total power consumption of 8.5 W and deterministic processing latencies below 62 ms. The architecture's energy efficiency and high-precision detection position it as a viable solution for distributed space surveillance networks.
-
-### [A Neuromorphic Trigger for Efficient Audio Event Detection](http://arxiv.org/abs/2606.17775v2)
-**2026-06-16** | *Benjamin Hatton, Oliver Rhodes, Luca Peres*
-
-> Efficient processing of continuous audio streams remains a key challenge for real-time and resource-constrained systems. This paper introduces a neuromorphic trigger for audio event detection, based on a spiking neural network (SNN) that selectively gates input to downstream models. The proposed neuromorphic trigger acts as a flexible low-cost front-end, identifying salient audio segments and enabling these to be processed by a more computationally intensive model for tasks such as classification. The trigger is implemented as a lightweight fully connected SNN using a close-open filter for postprocessing, and is evaluated on two representative tasks: Anomalous Sound Detection (ASD) and Sound Event Detection (SED). For ASD, the trigger achieves a one-second segment-based F1 score of 0.97 on a class-agnostic form of the URBAN-SED dataset, demonstrating high reliability in identifying relevant audio regions. For SED, the trigger is combined with the Dang classifier on the DCASE 2017 Challenge Task 2 dataset, showing a potential $42.6\times$ reduction in FLOPs while reducing the lower bound of the event-based error rate from 0.41 to 0.25. These results highlight the potential of neuromorphic triggers as real-time, energy-efficient front-end filters, enabling substantial reductions in computational cost.
 
 ---
 
