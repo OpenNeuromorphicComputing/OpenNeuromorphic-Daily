@@ -1,10 +1,15 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-07-09 10:52 UTC
+**Automated Daily Update** | Last Run: 2026-07-10 10:51 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
 ## 🛠 Hardware & Materials
+
+### [Broadband silicon photonic phase shifters driven by gradient optical forces](http://arxiv.org/abs/2607.08558v1)
+**2026-07-09** | *Guillermo Arregui, Sander Jæger Linde, Magnus Vejby Nielsen et al.*
+
+> While initially deployed for optical interconnects, silicon photonics is increasingly being explored as a hardware platform for programmable optical systems, including linear optical processors, neuromorphic photonic networks, quantum photonic circuits and multiplexed sensor arrays. Common to most existing implementations is that light is controlled with electronics, and even basic demonstrations wherein light directly controls light remain limited. Here we demonstrate a broadband all-optical silicon photonic phase shifter based on an optomechanically mediated light-light interaction arising from the gradient optical force. Our device concept relies on slot-mode waveguides suspended by subwavelength gratings, which provide mechanical support while preserving optical confinement. We demonstrate all-optical phase shifting using a guided pump beam co-propagating with the signal beam, with only 60 $μ$W required to achieve a $π$ phase shift in a 178.6 $μ$m-long device. In addition, we measure the required pump power across a wide parameter space and find quantitative agreement with a lumped force-equilibrium model. Since the actuation relies on an all-optical geometric deformation rather than on material-index tuning, the approach avoids local electrical connections to the active element, carries no Kramers-Kronig absorption penalty, and is naturally compatible with cryogenic quantum photonic platforms.
 
 ### [Dynamic neural manifolds for flexible closed-loop control on neuromorphic hardware](http://arxiv.org/abs/2607.07373v1)
 **2026-07-08** | *Oskar von Seeler, Christian Tetzlaff, Andrew Lehr*
@@ -134,11 +139,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-06-30** | *Pavia Bera, Jennifer Adorno, Sanjukta Bhanja*
 
 > Anomaly detection in multivariate time series remains a critical challenge in large-scale distributed systems, where related entities may exhibit transferable precursor behavior prior to anomaly onset. Existing methods typically operate independently on each data stream and therefore remain fundamentally reactive. To address this limitation, we introduce Distributed Hierarchical Temporal Memory (D-HTM), a neuromorphic framework that enables cross-entity preemptive warning through a Shared Associative Memory (SAM).   D-HTM combines a Spatial Pooler (SP) that projects observations into a common Sparse Distributed Representation (SDR) space, Temporal Memory (TM) modules that learn entity-specific dynamics online, and a Shared Associative Memory that stores recurring pre-anomaly signatures. By reusing precursor knowledge across related entities, D-HTM can issue warnings prior to local anomaly onset while preserving HTM's online learning capabilities.   We evaluate D-HTM on the Server Machine Dataset (SMD), the Soil Moisture Active Passive (SMAP) dataset, the Mars Science Laboratory (MSL) dataset, and a synthetic cascade benchmark designed to isolate precursor transfer. Experimental results demonstrate effective cross-entity warning propagation while maintaining competitive reactive anomaly detection performance. Across the real-world datasets, D-HTM provides an average warning lead time of 8.1 samples prior to anomaly onset.   These findings demonstrate that transferable precursor structure can emerge within a shared SDR space and be reused for preemptive warning generation, extending HTM beyond isolated reactive detection toward distributed predictive reasoning.
-
-### [Mega: A 22 nm Convolutional Spiking Neural Network Accelerator Achieving 0.375 pJ/SOP for Efficient Edge Vision](http://arxiv.org/abs/2606.30039v1)
-**2026-06-29** | *Rick Luiken, Manil Dev Gomony, Sander Stuijk*
-
-> Convolutional Spiking Neural Networks (SNN) offer the potential for highly energy-efficient vision processing by exploiting sparse, event-driven computation. However, existing SNN accelerators underutilize the inherent parallelism of convolutional layers and lack the flexibility to accommodate varying memory demands and input sparsity across layers. This paper presents Mega, a digital architecture for convolutional SNNs that addresses these limitations through three key contributions: (1) highly parallel acceleration of $3 \times 3$ convolutions, (2) a unified data memory for spikes, neuron states, and weights, and (3) efficient spike map processing with low-overhead spike detection. Fabricated in GlobalFoundries 22 nm FDSOI technology, Mega achieves an energy efficiency of 0.375 pJ/SOP, improving the state of the art by $4\times$.
 
 ---
 
