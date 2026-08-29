@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-08-28 19:53 UTC
+**Automated Daily Update** | Last Run: 2026-08-29 13:37 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
