@@ -1,10 +1,15 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-09-02 12:33 UTC
+**Automated Daily Update** | Last Run: 2026-09-03 12:36 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
 ## 🛠 Hardware & Materials
+
+### [An Emerging NVM-Based On-Chip Training Architecture with Non-Ideality Mitigation Through Bipolar Weight Distributions](http://arxiv.org/abs/2609.01948v1)
+**2026-09-01** | *Peng Dang, Youna Huang, Yintao He et al.*
+
+> The rapid advancement of deep learning has presented significant energy efficiency challenges to the conventional von Neumann architecture. In-memory computing (IMC) architectures based on emerging non-volatile memory (eNVM) are widely regarded as a promising solution for accelerating neural network training due to their high parallelism and low power consumption. However, the intrinsic non-idealities of eNVM devices can cause conductance updates to deviate from target values, thereby limiting the performance of on-chip training. To address this challenge, this paper presents a Non-ideality Optimized eNVM Accelerator (NOVA) architecture for on-chip training. Specifically, we first fabricate a two-dimensional (2D) ferroelectric field-effect transistor (FeFET) and develop a conductance modulation behavioral model calibrated with experimental data. Building upon this device model, we propose, for the first time, a Non-ideality Avoidance Training (NAT) algorithm tailored for eNVM devices, which mitigates accuracy degradation by guiding weight convergence toward the most stable conductance regions of eNVM devices. Experimental results demonstrate that, even under severe device asymmetry, NAT improves the accuracy by an average of 15.1\% over the baseline methods across multiple benchmark tasks. Meanwhile, the NOVA achieves an average energy efficiency gain of approximately 33.58$\times$ compared with the peak energy efficiency of graphics processing units (GPUs).
 
 ### [A relational fabrication-to-modeling database for memristor devices](http://arxiv.org/abs/2609.01500v1)
 **2026-09-01** | *Lai Gan, Guoyang Huang, Deepika Yadav et al.*
@@ -80,11 +85,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-08-25** | *Sebastian Billaudelle, Christian Metzner, Jimmy Weber et al.*
 
 > As neuromorphic systems scale beyond a single core, inter-core event communication can become a dominant contributor to memory footprint, latency, and energy consumption. Biological neural systems address a similar scaling challenge through small-world organization, combining dense local connectivity with sparse long-range projections. In this work, we compare two recent multicore neuromorphic systems implemented in the same 22-nm FDSOI technology and explicitly optimized for such connectivity. The first, NeoCorAl, uses an asynchronous packet-switched tree with hierarchical multicast, whereas the second, MOSAIC, employs an RRAM-based, circuit-switched two-dimensional mesh that performs routing in memory. We examine the resulting trade-offs in routing flexibility, hop count, memory requirements, multicast efficiency, and scalability. We further study how the relative efficiency of tree- and mesh-based routing depends on communication locality in spatially-embedded, random, and layered networks. Finally, we discuss routing-aware training as a means of jointly optimizing neural connectivity, task performance, and hardware mappability.
-
-### [Low-Latency Activation-Regularized Sparse Neural Operators with Distillation Assistance Towards Real-Time Edge-Deployable Virtual Sensing](http://arxiv.org/abs/2608.23987v1)
-**2026-08-25** | *William Howes, Farid Ahmed, Syed Bahauddin Alam*
-
-> Virtual sensing enables digital twins and safety-critical systems to reconstruct and forecast spatial-temporal physics in real time. However, conventional computational and data-driven methods often face challenges in generalization, latency, and energy efficiency for edge deployment. Neural operators offer a promising alternative but remain reliant on power-intensive hardware. Spiking neurons and neuromorphic computing can improve efficiency, yet surrogate-gradient training and multi-step spiking introduce convergence and latency challenges. We propose the Sparse-Activation-ReLU (SAR) layer, a single-step alternative that promotes activation sparsity without surrogate-gradient training while remaining compatible with event-based computing. Within a trunk-based NOMAD architecture, SAR achieves over a fivefold improvement in the combined Latency-Error-Energy (LEE) metric compared with Variable Spiking Neuron (VSN) and Leaky Integrate-and-Fire (LIF) implementations. We further analyze spiking entropy and feature usage and introduce synthetic knowledge distillation, reducing the LEE score by more than twofold. Finally, we improve VSN through a ReLU-based spiking loss and graph-neighbor thresholding. On the Heat Exchanger dataset, these approaches reduce L2 error by more than twofold and nearly sevenfold, respectively, while reducing spiking and spatial aggregation. Overall, the work presented is a step towards energy-efficient virtual sensing by providing an alternative framework that can be positioned towards neuromorphic or other edge device integration that can be a gold standard to compare latency, energy, and error performance for future efficient designs that are sparsity or brain-inspired spiking based.
 
 ---
 
