@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-09-22 13:06 UTC
+**Automated Daily Update** | Last Run: 2026-09-23 13:21 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -66,14 +66,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > This report extends our previous work (Part 1), which introduced an energy-based model for learning and decision-making under uncertainty. The model leverages stochastic Langevin dynamics to continuously evolve approximate probability distributions over neuron states and model weights. However, as noted in Part 1 and confirmed through GPU-based implementations, large-scale probabilistic energy-based models of this nature face significant scalability challenges due to excessive execution latency. This latency stems from a fundamental mismatch: massively parallel models with low arithmetic intensity (such as energy-based models) are being executed on processor architectures like GPUs that rely on high-bandwidth memory (HBM) interfaces. The HBM imposes brutally sequential execution constraints on inherently parallelizable models, creating the false impression that such models are unscalable. In reality, it is the GPU architecture itself, with its dependence on HBM interfaces, that is not a scalable processor architecture for this class of AI model. In this report, we demonstrate using a detailed transaction-level model (TLM) of a probabilistic analogue in-memory computing (AIMC) processor that the same energy-based model can execute well over 1000x faster than data-center-grade hardware by eliminating the HBM interface and performing computation directly within on-chip memory.
 
-### [Bio-inspired Learning and Decision-Making with Probabilistic In-Memory Computing Hardware: Part 1](http://arxiv.org/abs/2609.11281v1)
-**2026-09-10** | *Thomas Dalgaty, Eiji Kawasaki, Miguel de Prado et al.*
-
-> Learning and decision-making in animals are often modeled as Bayesian processes, where sensory evidence is integrated with prior beliefs to guide behavior in the face of uncertainty. But what are the inherent neural dynamics that give rise to this ability, and how could they be replicated in computing systems? This abstract discusses a biologically grounded framework in which noisy neural and synaptic dynamics perform inference and learning via stochastic sampling from an internal energy function, capturing uncertainty over latent states and model parameters through neural and synaptic variability, respectively. This enables approaches such as predictive coding networks to account for epistemic uncertainty via Markov chain Monte Carlo sampling. Drawing a parallel between intrinsic noise in biological systems and electrical noise in emerging probabilistic analogue memory technologies, we highlight how analogue in-memory computing hardware naturally emerges as the solution for massively scalable and energy-efficient probabilistic inference.
-
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [SBMVTrack: Spike-Budgeted Multi-View Learning for Energy-Efficient UAV Tracking](http://arxiv.org/abs/2609.25503v1)
+**2026-09-21** | *Pengzhi Zhong, Jiwei Mo, Haolun Li et al.*
+
+> With sparse and event-driven computation, spiking neural networks show great potential for achieving accurate and energy-efficient UAV visual tracking. However, existing SNN-based trackers typically use spike firing rates only for energy evaluation and lack explicit optimization of actual spike activity. To address this, we propose SBMVTrack, a fully spiking framework for energy-efficient UAV tracking. SBMVTrack introduces Energy-Weighted Spike Budgeting (EWSB). EWSB weights actual spike activity according to the computational cost of each spiking layer. It constrains the energy-weighted firing rate and saturation activity, thereby reducing redundant spike computations. To improve tracking performance under the spike budget constraint, we propose Masked Multi-View Target Modeling (MVTM). This method treats the initial template, online template, and search region from the same sequence as correlated temporal views. It enhances the robustness of target representations through cross-view feature completion and identity-consistency learning. Extensive experiments on multiple benchmarks demonstrate that SBMVTrack effectively reduces the average spike firing rate and theoretical energy consumption. Meanwhile, it maintains competitive tracking performance, achieving a better accuracy-energy trade-off. The source code will be released upon acceptance.
 
 ### [Hypervectors from Optical Disorder: Programmable Encoding and Optical Inference for Hyperdimensional Computing](http://arxiv.org/abs/2609.24108v1)
 **2026-09-21** | *Takuya Iwata, Namthip Srisuthep, Satoshi Sunada*
