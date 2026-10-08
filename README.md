@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-10-07 15:05 UTC
+**Automated Daily Update** | Last Run: 2026-10-08 15:13 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -75,6 +75,11 @@ Papers are automatically categorized by topic and sorted by date.
 
 ## 🧠 Algorithms & Theory
 
+### [EM-SNN: Efficiently Modulated Spiking Neural Network for Remote Sensing Image Dehazing](http://arxiv.org/abs/2610.09275v1)
+**2026-10-07** | *Jie Shao, Jiaqi Ma, Wenwen Min et al.*
+
+> Although spiking neural networks (SNNs) provide an energy-efficient alternative to artificial neural networks (ANNs), their application to remote sensing image dehazing remains limited. A key challenge arises from the coupling between haze-induced high-frequency attenuation and discrete spike thresholding. This interaction suppresses weak responses and fundamentally limits the recovery of edges, textures, and fine details in spiking dehazing models. To address this challenge, we propose the Efficiently Modulated Spiking Neural Network (EM-SNN), a dedicated spiking framework tailored to remote sensing image dehazing. EM-SNN integrates a statistics-driven Threshold-Modulated Leaky Integrate-and-Fire (TM-LIF) neuron to adaptively compensate for haze-induced contrast compression, together with a Spike Sobel Modulation (SSM) module that enhances structural cues and reduces depth-wise attenuation during spiking feature propagation. By jointly modulating activation scales and structural representations, EM-SNN improves dehazing performance while preserving the inherent event-driven sparsity of SNNs. Experiments on HRSD, RICE, RRSHID, and SateHaze1K demonstrate that EM-SNN achieves competitive dehazing performance while consuming only one quarter of the energy of the strong ANN baseline SFRDP-Net.
+
 ### [Common-Mode Errors Limit Low-Timestep Deep Spiking Q-Networks](http://arxiv.org/abs/2610.07808v1)
 **2026-10-06** | *Zijie Xu, Bingrui Guo, Yiding Sun et al.*
 
@@ -135,19 +140,14 @@ Papers are automatically categorized by topic and sorted by date.
 
 > In recent years, artificial neural networks (ANNs) have emerged as the de facto standard for addressing challenging problems in communications engineering that are difficult to solve using traditional methods. However, the dense matrix multiplications employed in ANNs often result in high computational complexity and, consequently, power-hungry systems. To overcome these limitations, researchers are turning to alternative computational models, such as spiking neural networks (SNNs), which promise highly energy-efficient computation. Recent works have shown that SNN-based equalizers and demappers achieve promising results in non-coherent short-reach optical communication systems affected by chromatic dispersion and nonlinear distortion. However, the proposed approaches differ in several design choices, such as the incorporation of decision feedback, the use of recurrent connections inside the SNN, different neural encodings, and regularization techniques. A systematic comparison of the various design choices has not yet been reported in the literature. This article presents a systematic comparison of design choices for SNN-based equalizers and demappers in intensity modulation with direct detection systems, evaluating their impact on bit error rate, spike activity, and model size. The results reveal that design and encoding choices affect these metrics differently, leading to inherent trade-offs.
 
-### [SpikeCredit: Temporal Credit Carrier for Reinforcement Learning with Sparse Rewards](http://arxiv.org/abs/2609.35268v1)
-**2026-09-28** | *Yingchao Yu, Pengfei Sun, Wenxuan Pan et al.*
-
-> Reinforcement learning (RL) with sparse rewards is challenging because delayed outcomes provide little guidance about which intermediate computations caused success or failure. We argue that reliable credit assignment requires policy dynamics that preserve and expose credit-relevant information over time, a role we formalize as Temporal Credit Carriers (TCCs) and that spiking neural networks (SNNs) naturally fulfill through graded membrane traces and event-driven spikes. Based on this hypothesis, we propose SpikeCredit, an SNN-based framework for RL with sparse rewards that first performs task-adaptive TCC selection and then closes the loop between a fast TCC-reading pathway, where self-motion feedback constraint uses local behavior-grounded cues to constrain transition-level credit recovery, and a slow TCC-writing pathway, where credit-targeted trace alignment feeds recovered credit back into the actor to make future TCC dynamics more credit-readable. Across sparse-reward MuJoCo tasks, SpikeCredit improves Last10 return over sparse SNN baselines by +1169% on Ant, +953% on Hopper, +723% on Swimmer, and +1781% on Walker2d, and exceeds the dense-reward baseline on Swimmer by +113%. Mechanistic analyses further show substantially stronger alignment with dense rewards than the sparse SNN baseline. These results position spiking dynamics as credit-preserving substrates for sparse-reward RL.
-
-### [Latency and accuracy tradeoffs in Spiking Neural Networks](http://arxiv.org/abs/2609.35260v1)
-**2026-09-28** | *Zhanglu Yan, Zixuan Zhu, Kaiwen Tang et al.*
-
-> Spiking neural networks are attractive for low-power speech command recognition, yet their latency has received far less attention than their energy efficiency, and their multi-timestep execution is widely assumed to make them slower than quantized neural networks. This paper challenges the assumption that more local timesteps necessarily imply higher network latency. By overlapping computation across adjacent layers at the timestep level, SNNs may complete execution in less time than comparable bit-serial QNNs. However, this overlap relies on spikes firing on incomplete inputs, and a spike once generated cannot be withdrawn, so its error persists and reduces accuracy. Waiting for more input before firing would seem to improve accuracy at the cost of reduced overlap. Yet we find and prove that this intuition fails at some layers, where even a small increase in waiting can change spike timing and downstream computation, making the network both slower and less accurate. We therefore propose a Pipeline Delay Search method which selects each layer's delay by balancing task-level accuracy gains against added network latency. We then adapt the selected configurations through spike-based quantization-aware training and bounded tuning of firing thresholds and initial membrane potentials. Together, these steps form Falcon, a framework for Fine-grained Analysis of Latency and Controlled firing which systematically analyzes and optimizes SNN latency under a spatial analog compute-in-memory mapping with shared digital engines. We evaluate Falcon on GSCV2 and SSC, achieving competitive accuracies of 96.31 and 83.02 at modeled network-core latencies of 119.64 and 124.00us, respectively. Together, our analysis and results show that SNNs can compute more yet finish faster, and wait longer yet predict worse, highlighting why Falcon matters for both latency and accuracy.
-
 ---
 
 ## 👁️ Applications & Sensing
+
+### [Bringing BNNs to Fast Event Processing](http://arxiv.org/abs/2610.09873v1)
+**2026-10-07** | *Paul Longour, Julien Moreau, Franck Davoine*
+
+> Binary Neural Networks (BNNs) enable efficient deep learning deployment on resource constrained devices with weights and activations compressed to one bit, substantially reducing model size and inference cost. Event cameras offer complementary advantages, including low latency, high dynamic range, and low power consumption, by capturing asynchronous streams of events rather than dense image frames. Despite their shared emphasis on efficiency, the combination of these technologies remains largely unexplored. This work aims at adapting and evaluating modern deep BNN architectures on event data. We also show that cross-modal pretraining from RGB data can improve the classification accuracy of BNNs on neuromorphic datasets. We introduce the Polar-wise Binary Event Volume (PBEV), a binary representation that enables event-camera data to be processed directly by BNNs and represents a step toward fully binarized event-based vision systems. Best evaluated BNN on N-Caltech101 classification benchmarks shows 90.58% accuracy with 7.5x less operations than their full-precision counterparts.
 
 ### [Contrastive Attention Mitigates Spectral Bias in Spiking Transformers](http://arxiv.org/abs/2610.01403v1)
 **2026-10-01** | *Xiaoli Liu, Malu Zhang, Yang Yang*
