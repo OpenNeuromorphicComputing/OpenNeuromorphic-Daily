@@ -1,6 +1,6 @@
 # 🧠 Open Neuromorphic - Daily ArXiv
 
-**Automated Daily Update** | Last Run: 2026-10-22 13:28 UTC
+**Automated Daily Update** | Last Run: 2026-10-23 13:06 UTC
 
 Papers are automatically categorized by topic and sorted by date.
 
@@ -54,6 +54,11 @@ Papers are automatically categorized by topic and sorted by date.
 ---
 
 ## 🧠 Algorithms & Theory
+
+### [Spike-Aware Gradient-Based Mixed-Precision Quantization of Spiking Neural Networks for Vision Applications](http://arxiv.org/abs/2610.30339v1)
+**2026-10-21** | *Rajshekhar Rakshit, Devgokul B., Rakshitha Kalkura et al.*
+
+> In recent years, Spiking Neural Networks (SNNs) have gained massive attention as an energy-efficient neural computing paradigm due to their event-driven and sparse computing capability. However, maintaining accuracy under low-precision constraints, necessary for practical deployment, has been largely unexplored for SNN models. In addition, existing Hessian-based approaches for quantization, such as HAWQ-V2, incur significant memory and computational overhead due to temporal unrolling across multiple SNN timesteps. We propose a spike-aware gradient-based mixed-precision quantization framework for SNNs that adaptively assigns bit-widths using first-order gradient information, avoiding costly second-order Hessian computations. We evaluate our method across various SNN-based architectures, including VGG, ResNet, and Vision Transformer models obtained from both ANN-to-SNN conversion and direct training frameworks, on CIFAR10/100, ImageNet, and DVS-CIFAR-10 datasets. Notably, on ResNet-34 evaluated on ImageNet, our method achieves 73.30% accuracy at 4.78$\times$ compression, which is comparable to that provided by HAWQ-V2, while reducing memory consumption by 2.31$\times$ and bit-allocation runtime by 100$\times$. We also present an energy analysis for mixed-precision SNNs showing that the proposed quantization strategy enables energy-efficient deployment without compromising performance.
 
 ### [Bio-Inspired Auditory Processing: Coupling Parallel Resonate-and-Fire Dynamics with Ternary Recurrent Networks for Speech Recognition](http://arxiv.org/abs/2610.29720v1)
 **2026-10-21** | *Pavlos Poulos, Katelyn Sadorf, Themos Stafylakis et al.*
@@ -139,11 +144,6 @@ Papers are automatically categorized by topic and sorted by date.
 **2026-10-13** | *Michael Fauth, Han Lu, Jannik Luboeinski et al.*
 
 > Synaptic connections are continuously formed and eliminated even in adult neuronal networks. This process - called structural plasticity - allows networks to change their topology to learn and adapt to their environment or compensate for lesions. Yet, in contrast to synaptic plasticity, structural plasticity is less well studied and understood. We here present the current state of knowledge as well as open problems in the field along three guiding questions: (1) What regulates structural plasticity in biological neural networks? (2) What are the functional consequences and advantages of structural plasticity in adult neural networks? (3) How can our understanding of structural plasticity be translated into clinical and technological applications? We argue that understanding structural plasticity is a problem involving multiple temporal and spatial scales. Solving this problem thus requires collaborative efforts of experimentalists, theoreticians as well as computational modelers, and has the potential for comprehensive neuroscientific insights that can guide the development of medical applications, artificial neural networks as well as neuromorphic computing.
-
-### [Saliency-Guided Replay for Continual Learning in Deep Spiking Neural Networks](http://arxiv.org/abs/2610.17998v1)
-**2026-10-13** | *Francesco Panetta, Federico Di Valerio, Michela Proietti*
-
-> Spiking Neural Networks (SNNs) are promising for energy-efficient neuromorphic computing, but they still suffer from catastrophic forgetting when learning tasks sequentially. This work investigates the integration of Experience Packing and Replay (EPR) as a memory-efficient continual learning strategy for deep SNNs under low-latency constraints. The proposed framework combines Batch Normalization Through Time stabilized VGG9 SNNs with Spike Activation Maps (SAM), which provide forward-only explanations based on spike activity. These explanations are temporally aggregated into spatial attention maps and used to select the most informative image patches for replay, instead of storing full images. Experiments on Split CIFAR10 and Split CIFAR100 show that SAM-guided EPR improves the accuracy-memory trade-off under tight memory budgets, and remains competitive while requiring substantially less storage.
 
 ---
 
